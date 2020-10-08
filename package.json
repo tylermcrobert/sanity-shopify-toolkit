@@ -44,6 +44,8 @@
     }
   ],
   "devDependencies": {
+    "@sanity/client": "^2.0.1",
+    "@sanity/image-url": "^0.140.19",
     "@size-limit/preset-small-lib": "^4.6.0",
     "husky": "^4.3.0",
     "size-limit": "^4.6.0",
