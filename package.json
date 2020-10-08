@@ -48,6 +48,7 @@
     "@sanity/image-url": "^0.140.19",
     "@size-limit/preset-small-lib": "^4.6.0",
     "husky": "^4.3.0",
+    "next": "^9.5.4",
     "size-limit": "^4.6.0",
     "tsdx": "^0.14.0",
     "tslib": "^2.0.2",
