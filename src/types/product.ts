@@ -57,6 +57,7 @@ export type ProductSchemaVariant<SupplementalVariantData = {}> = {
   data: string;
   price: string;
   isAvailable: boolean;
+  selectedOptions: { [key: string]: string }[];
 } & SupplementalVariantData;
 
 /**
