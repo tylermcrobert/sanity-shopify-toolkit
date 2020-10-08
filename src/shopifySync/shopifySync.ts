@@ -75,6 +75,9 @@ export const shopifySync = async ({
         variant.inventory_quantity > 0 ||
         variant.inventory_management !== 'deny',
       data: JSON.stringify(variant),
+      selectedOptions: [variant.option1, variant.option2, variant.option3]
+        .filter(a => a)
+        .map((optionName, i) => ({ [data.options[i].name]: optionName })),
     }));
 
     /**
