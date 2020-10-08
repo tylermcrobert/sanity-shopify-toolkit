@@ -1,4 +1,4 @@
-# Soho
+# Sanity Shopify Toolkit
 
 A utility toolkit for building Shopify sites with Sanity, Shopify, and Next.
 
@@ -16,7 +16,7 @@ import {
   ProductInfo,
   ProductConfigurations,
   ProductData,
-} from '@soho/schemas';
+} from '@sanity-shopify-toolkit';
 
 export default {
   ...product,
