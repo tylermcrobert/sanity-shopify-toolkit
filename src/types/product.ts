@@ -57,8 +57,16 @@ export type ProductSchemaVariant<SupplementalVariantData = {}> = {
   data: string;
   price: string;
   isAvailable: boolean;
-  selectedOptions: { [key: string]: string }[];
+  selectedOptions: ProductSchemaOptionMeta[];
 } & SupplementalVariantData;
+
+/**
+ * Information about option value and category
+ */
+export type ProductSchemaOptionMeta = {
+  categoryName: string;
+  value: string;
+};
 
 /**
  * Sanity Shopify Data

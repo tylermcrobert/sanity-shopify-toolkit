@@ -77,7 +77,10 @@ export const shopifySync = async ({
       data: JSON.stringify(variant),
       selectedOptions: [variant.option1, variant.option2, variant.option3]
         .filter(a => a)
-        .map((optionName, i) => ({ [data.options[i].name]: optionName })),
+        .map((optionName, i) => ({
+          categoryName: data.options[i].name,
+          value: optionName,
+        })),
     }));
 
     /**
