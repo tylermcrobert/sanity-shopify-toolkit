@@ -14,6 +14,7 @@ type SyncScriptOptions = {
   slackWebhookUrl: string;
 };
 
+// TODO: Make slack webhook optionsl
 export const shopifySync = async ({
   req,
   res,
