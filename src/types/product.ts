@@ -50,7 +50,7 @@ export type ProductSchemaOptionCategoryValue<SuplementalVal = {}> = {
  * Variant images are typically stored and recieved here.
  */
 export type ProductSchemaVariant<SupplementalVariantData = {}> = {
-  image: SanityImage;
+  image?: SanityImage;
   _key: string;
   id: string;
   title: string;
