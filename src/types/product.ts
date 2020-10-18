@@ -20,29 +20,37 @@ export type ProductSchemaOptions<
   /** It's possible to add additional fields to variants */
   SupplementalVariant = {},
   /** It's possible to add additional fields to category values */
-  SupplimentalCategoryVal = {}
+  SupplimentalCategoryVal = {},
+  /** It's possible to add additional fields to category values */
+  SuplementalItemVals = {}
 > = {
   options: {
     variants: ProductSchemaVariant<SupplementalVariant>[];
-    categories: ProductSchemaOptionCategory<SupplimentalCategoryVal>[];
+    categories: ProductSchemaOptionCategory<
+      SupplimentalCategoryVal,
+      SuplementalItemVals
+    >[];
   };
 };
 
 /**
  * Corresponds to "Options" in Shopify.
  */
-export type ProductSchemaOptionCategory<SuplementalVal = {}> = {
+export type ProductSchemaOptionCategory<
+  SuplementalCategoryVals,
+  SuplementalItemVals
+> = {
   _key: string;
   _type: 'option';
   name: string;
-  values: ProductSchemaOptionCategoryValue<SuplementalVal>[];
-};
+  values: ProductSchemaOptionCategoryValue<SuplementalItemVals>[];
+} & SuplementalCategoryVals;
 
-export type ProductSchemaOptionCategoryValue<SuplementalVal = {}> = {
+export type ProductSchemaOptionCategoryValue<SuplementalItemVals = {}> = {
   _key: string;
   _type: 'value';
   title: string;
-} & SuplementalVal;
+} & SuplementalItemVals;
 
 /**
  * Product variants in Sanity
