@@ -135,12 +135,7 @@ export const ProductConfigurations = ({
                       {
                         name: 'title',
                         type: 'string',
-                      },
-
-                      {
-                        title: 'Color Value',
-                        type: 'color',
-                        name: 'optionColors',
+                        readOnly: true,
                       },
                       ...(optionValueFields || []),
                     ],
