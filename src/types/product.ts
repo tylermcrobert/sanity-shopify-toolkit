@@ -37,8 +37,8 @@ export type ProductSchemaOptions<
  * Corresponds to "Options" in Shopify.
  */
 export type ProductSchemaOptionCategory<
-  SuplementalCategoryVals,
-  SuplementalItemVals
+  SuplementalCategoryVals = {},
+  SuplementalItemVals = {}
 > = {
   _key: string;
   _type: 'option';

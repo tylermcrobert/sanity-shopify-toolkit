@@ -73,7 +73,7 @@ export const shopifySync = async ({
       price: variant.price,
       compareAtPrice: variant.compare_at_price,
       isAvailable:
-        variant.inventory_quantity > 0 ||
+        variant.inventory_quantity > 0 &&
         variant.inventory_management !== 'deny',
       data: JSON.stringify(variant),
       selectedOptions: [variant.option1, variant.option2, variant.option3]
